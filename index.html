@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ふるさと納税ナビ｜控除上限額を概算</title>
+<meta name="description" content="ふるさと納税の控除上限額（自己負担2,000円で済む寄附額の目安）を年収から無料で概算。ふるさと納税のしくみや控除の仕組みもやさしく解説します。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="site-title" href="index.html">ふるさと納税ナビ</a>
+    <nav class="site-nav">
+      <a href="index.html">ホーム</a>
+      <a href="index.html#articles">記事一覧</a>
+      <a href="about.html">運営者情報</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<header class="site-header">
+  <h1>ふるさと納税ナビ</h1>
+  <p class="tagline">控除上限の目安をかんたん概算。ふるさと納税のしくみもやさしく解説。</p>
+</header>
+
+<main>
+
+  <section class="card form-card">
+    <h2>控除上限額シミュレーター</h2>
+    <p class="form-intro">額面年収（と控除対象の家族人数）を入力すると、自己負担2,000円で済む寄附額の目安（控除上限額）を概算します。</p>
+    <form id="sim-form" novalidate>
+      <div class="field">
+        <label for="income">額面年収</label>
+        <div class="input-wrap">
+          <input type="number" id="income" inputmode="numeric" min="1" step="1" placeholder="例：400" required>
+          <span class="unit">万円</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="dependents">控除対象の家族人数（任意）</label>
+        <div class="input-wrap">
+          <input type="number" id="dependents" inputmode="numeric" min="0" step="1" placeholder="例：0">
+          <span class="unit">人</span>
+        </div>
+        <p class="field-hint">控除対象の配偶者＋扶養親族の合計人数。未入力の場合は0人として計算します。</p>
+      </div>
+      <p id="form-error" class="form-error" role="alert"></p>
+      <button type="submit" id="calc-btn">計算する</button>
+    </form>
+  </section>
+
+  <section id="result" class="result-area" hidden></section>
+
+  <section class="card disclaimer">
+    <h2>計算についての注意</h2>
+    <p>
+      この金額はあくまで“目安”の概算です。実際の控除上限は、年収だけでなく社会保険料・各種控除（住宅ローン控除や医療費控除、iDeCoなど）・家族構成によって変わります。
+      本ツールは社会保険料を収入の約15%、住民税を標準税率で簡易計算しており、控除は家族人数以外を反映していません。
+      上限を超えた寄附分は自己負担になります。
+      正確な上限額は、お住まいの状況や各ふるさと納税サイトの詳細シミュレーション、勤務先・税務署でご確認ください。
+    </p>
+  </section>
+
+  <section class="card" id="articles">
+    <h2>記事一覧</h2>
+    <div class="article-list">
+      <a class="article-card" href="article-01-furusato-towa.html"><span class="card-cat">基本</span><span class="card-title">ふるさと納税とは？しくみをやさしく解説</span></a>
+      <a class="article-card" href="article-02-jougen.html"><span class="card-cat">上限</span><span class="card-title">ふるさと納税の控除上限額の決まり方</span></a>
+      <a class="article-card" href="article-03-jougen-koe.html"><span class="card-cat">上限</span><span class="card-title">上限を超えるとどうなる？</span></a>
+      <a class="article-card" href="article-04-onestop.html"><span class="card-cat">手続き</span><span class="card-title">ワンストップ特例制度の使い方</span></a>
+      <a class="article-card" href="article-05-kakutei.html"><span class="card-cat">手続き</span><span class="card-title">確定申告でのふるさと納税の手続き</span></a>
+      <a class="article-card" href="article-06-2000en.html"><span class="card-cat">基本</span><span class="card-title">自己負担2,000円のしくみ</span></a>
+      <a class="article-card" href="article-07-kazoku.html"><span class="card-cat">上限</span><span class="card-title">共働き・扶養家族で上限が変わる理由</span></a>
+      <a class="article-card" href="article-08-henreihin.html"><span class="card-cat">実践</span><span class="card-title">返礼品の選び方・還元率の考え方</span></a>
+      <a class="article-card" href="article-09-chuui.html"><span class="card-cat">実践</span><span class="card-title">ふるさと納税の注意点・落とし穴</span></a>
+      <a class="article-card" href="article-10-itsu.html"><span class="card-cat">実践</span><span class="card-title">いつやるべき？年末の駆け込みと計画的な進め方</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="about.html">運営者情報</a>
+    <a href="contact.html">お問い合わせ</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="disclaimer.html">免責事項</a>
+  </nav>
+  <p>&copy; 2026 ふるさと納税ナビ</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
